@@ -2,60 +2,59 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Kitty 🐱</title>
+<title>Kitty 🐱 | From Omkar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+* { box-sizing: border-box; }
+
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(120deg, #ffd1dc, #ff9aa2);
+    height: 100%;
     overflow: hidden;
 }
 
+/* MUSIC */
 audio {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 100;
+    z-index: 999;
 }
 
+/* SLIDER */
 .slider {
     display: flex;
+    width: 700%;
     height: 100vh;
-    width: 800%;
     transition: transform 0.8s ease-in-out;
 }
 
 .slide {
     width: 100vw;
-    flex-shrink: 0;
+    height: 100vh;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
 }
 
 .card {
     background: rgba(255,255,255,0.95);
+    padding: 30px;
+    max-width: 700px;
     border-radius: 25px;
-    padding: 35px;
-    max-width: 800px;
     text-align: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-h1 {
-    color: #e6005c;
-}
+h1 { color: #e6005c; }
+p { font-size: 18px; line-height: 1.6; }
 
-p {
-    font-size: 18px;
-    line-height: 1.7;
-}
-
+/* CONTROLS */
 .controls {
     position: fixed;
     bottom: 20px;
@@ -65,8 +64,8 @@ p {
 
 button {
     background: #ff5a7a;
-    color: white;
     border: none;
+    color: white;
     padding: 12px 22px;
     font-size: 16px;
     border-radius: 25px;
@@ -78,120 +77,111 @@ button:hover {
     background: #e6005c;
 }
 
+/* FIREWORKS */
 .firework {
     position: fixed;
-    font-size: 28px;
-    animation: explode 2s linear infinite;
+    font-size: 30px;
+    animation: pop 1.5s ease-out forwards;
 }
 
-@keyframes explode {
-    0% { transform: scale(0.5); opacity: 1; }
-    100% { transform: scale(1.5); opacity: 0; }
+@keyframes pop {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- MUSIC (add your song as music.mp3) -->
+<!-- BACKGROUND MUSIC -->
 <audio autoplay loop controls>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
 <div class="slider" id="slider">
 
-<!-- Slide 1 -->
+<!-- SLIDE 1 -->
 <div class="slide">
 <div class="card">
-<h1>🎉 Happy New Year Kitty 🐱</h1>
+<h1>Happy New Year Kitty 🐱🎉</h1>
 <p>
-It’s been a month of calls, smiles,  
+A month of calls, smiles,  
 and those tiny pauses when your soothing voice  
-makes the world go quiet 🌙
+makes the world go quiet 💖
 </p>
 </div>
 </div>
 
-<!-- Slide 2 -->
+<!-- SLIDE 2 -->
 <div class="slide">
 <div class="card">
+<h1>About You 🐾</h1>
 <p>
-Today — the first dawn of the year 🌅 —  
-I want to say what my heart has been balancing  
-like a perfect ledger.
-</p>
-<p><b>I really like you 🐾</b></p>
-</div>
-</div>
-
-<!-- Slide 3 -->
-<div class="slide">
-<div class="card">
-<p>
-I love the way you love cats 🐱,  
-the way your eyes feel like home 🏡  
-and how your guitar 🎸  
+I love the way you love cats 🐱  
+Your eyes feel like home 🏡  
+And your guitar 🎸  
 turns silence into stories.
 </p>
 </div>
 </div>
 
-<!-- Slide 4 -->
+<!-- SLIDE 3 -->
 <div class="slide">
 <div class="card">
+<h1>CA + Us 📚</h1>
 <p>
-As two CA students 📚,  
-we live in audits, ledgers, and deadlines.
-</p>
-<p>
-But somewhere between trial balance  
-and tax provisions,  
-my feelings found their <b>true & fair view</b>.
+Between audits, ledgers & deadlines,  
+my feelings found their  
+<b>true and fair view</b> 🐱
 </p>
 </div>
 </div>
 
-<!-- Slide 5 -->
+<!-- SLIDE 4 -->
 <div class="slide">
 <div class="card">
+<h1>Accounts Meme 💕</h1>
 <p>
-You’re my going concern 💖  
-the asset I never want to depreciate.
-</p>
-<p>
-Your smile is my intangible asset  
+You’re my going concern,  
+the asset I never want to depreciate 📈  
+Your smile is my intangible  
 with infinite value ✨
 </p>
 </div>
 </div>
 
-<!-- Slide 6 (I LOVE YOU + CRACKERS) -->
+<!-- SLIDE 5 : I LOVE YOU -->
 <div class="slide">
 <div class="card">
-<h1>❤️ I LOVE YOU KITTY 🐱❤️</h1>
+<h1>I LOVE YOU 💖</h1>
 <p>
-No creative accounting,  
-only honest disclosures of my heart.
+No window dressing.  
+Only honest disclosures of my heart 🐾
 </p>
 </div>
 </div>
 
-<!-- Slide 7 (QUESTION) -->
+<!-- SLIDE 6 : QUESTION -->
 <div class="slide">
 <div class="card">
-<h1>📊 Final Question</h1>
+<h1>📊 Final Entry</h1>
 <p>
-Will you be my girlfriend? 🐱💕
+Will you be my girlfriend? 🐱❤️  
+<br><br>
+Debit: My Heart 💕  
+Credit: Your Smile 😄
 </p>
-<button onclick="yesClicked()">YES ✅</button>
-<button onclick="noClicked()">NO ❌</button>
+
+<button onclick="yesAnswer()">YES 💖</button>
+<button onclick="noAnswer()">NO 😿</button>
 </div>
 </div>
 
-<!-- Slide 8 (RESULT) -->
+<!-- SLIDE 7 : RESULT -->
 <div class="slide">
-<div class="card" id="result">
+<div class="card" id="resultCard">
 <h1>🐱</h1>
+<p></p>
 </div>
 </div>
 
@@ -206,9 +196,57 @@ Will you be my girlfriend? 🐱💕
 let index = 0;
 const slider = document.getElementById("slider");
 
-function update() {
+function updateSlide() {
     slider.style.transform = "translateX(-" + index * 100 + "vw)";
 }
 
 function next() {
-    if (index
+    if (index < 6) index++;
+    updateSlide();
+}
+
+function prev() {
+    if (index > 0) index--;
+    updateSlide();
+}
+
+/* FIREWORK FUNCTION */
+function fireworks() {
+    for (let i = 0; i < 25; i++) {
+        let f = document.createElement("div");
+        f.className = "firework";
+        f.innerHTML = "🎆";
+        f.style.left = Math.random() * 100 + "vw";
+        f.style.top = Math.random() * 100 + "vh";
+        document.body.appendChild(f);
+        setTimeout(() => f.remove(), 1500);
+    }
+}
+
+/* YES / NO */
+function yesAnswer() {
+    index = 6;
+    updateSlide();
+    fireworks();
+    document.getElementById("resultCard").innerHTML = `
+        <h1>She Said YES 💖🎉</h1>
+        <p>
+        My balance sheet is complete 😭❤️  
+        Welcome to my life, my favorite asset 🐱
+        </p>`;
+}
+
+function noAnswer() {
+    index = 6;
+    updateSlide();
+    document.getElementById("resultCard").innerHTML = `
+        <h1>😿😿😿</h1>
+        <p>
+        This cat is crying but still smiling 🐱💔  
+        Thank you for being honest.
+        </p>`;
+}
+</script>
+
+</body>
+</html>
