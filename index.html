@@ -6,55 +6,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* { box-sizing: border-box; }
-
-body, html {
+body {
     margin: 0;
-    padding: 0;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(120deg, #ffd1dc, #ff9aa2);
-    height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-/* MUSIC */
 audio {
     position: fixed;
     top: 10px;
-    left: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 999;
 }
 
-/* SLIDER */
-.slider {
+.slide {
+    display: none;
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
     display: flex;
-    width: 700%;
-    height: 100vh;
-    transition: transform 0.8s ease-in-out;
+    justify-content: center;
+    align-items: center;
 }
 
-.slide {
-    width: 100vw;
-    height: 100vh;
-    padding: 20px;
+.slide.active {
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .card {
     background: rgba(255,255,255,0.95);
-    padding: 30px;
-    max-width: 700px;
     border-radius: 25px;
+    padding: 35px;
+    max-width: 750px;
     text-align: center;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
-h1 { color: #e6005c; }
-p { font-size: 18px; line-height: 1.6; }
+h1 {
+    color: #e6005c;
+}
 
-/* CONTROLS */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
 .controls {
     position: fixed;
     bottom: 20px;
@@ -77,174 +75,176 @@ button:hover {
     background: #e6005c;
 }
 
-/* FIREWORKS */
 .firework {
     position: fixed;
-    font-size: 30px;
-    animation: pop 1.5s ease-out forwards;
+    font-size: 28px;
+    animation: boom 2s linear infinite;
 }
 
-@keyframes pop {
-    0% { transform: scale(0); opacity: 1; }
-    100% { transform: scale(2); opacity: 0; }
+@keyframes boom {
+    0% {transform: scale(0.5); opacity: 1;}
+    100% {transform: scale(2); opacity: 0;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- BACKGROUND MUSIC -->
-<audio autoplay loop controls>
+<!-- MUSIC -->
+<audio controls autoplay loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<div class="slider" id="slider">
+<!-- SLIDES -->
 
-<!-- SLIDE 1 -->
-<div class="slide">
+<div class="slide active">
 <div class="card">
-<h1>Happy New Year Kitty 🐱🎉</h1>
+<h1>🐱 Happy New Year Kitty</h1>
 <p>
-A month of calls, smiles,  
-and those tiny pauses when your soothing voice  
-makes the world go quiet 💖
+It’s been a month of calls, smiles, and those tiny pauses  
+when your soothing voice makes the world go quiet 🌙
+</p>
+<p>
+On this first dawn of the year 🌅  
+I want to say what my heart has been balancing like a perfect ledger.
 </p>
 </div>
 </div>
 
-<!-- SLIDE 2 -->
 <div class="slide">
 <div class="card">
-<h1>About You 🐾</h1>
+<h1>💖 You</h1>
 <p>
+I really like you 🐾  
 I love the way you love cats 🐱  
-Your eyes feel like home 🏡  
-And your guitar 🎸  
-turns silence into stories.
+the way your eyes feel like home 🏡  
+and how your guitar 🎸 turns silence into stories.
 </p>
 </div>
 </div>
 
-<!-- SLIDE 3 -->
 <div class="slide">
 <div class="card">
-<h1>CA + Us 📚</h1>
+<h1>📚 CA + Us</h1>
 <p>
-Between audits, ledgers & deadlines,  
-my feelings found their  
-<b>true and fair view</b> 🐱
+Between audits, ledgers, and deadlines 📊  
+my feelings found their true and fair view.
 </p>
-</div>
-</div>
-
-<!-- SLIDE 4 -->
-<div class="slide">
-<div class="card">
-<h1>Accounts Meme 💕</h1>
 <p>
 You’re my going concern,  
-the asset I never want to depreciate 📈  
-Your smile is my intangible  
+the asset I never want to depreciate ❤️
+</p>
+</div>
+</div>
+
+<div class="slide">
+<div class="card">
+<h1>📈 Accounting of My Heart</h1>
+<p>
+Your smile is my intangible asset  
 with infinite value ✨
 </p>
-</div>
-</div>
-
-<!-- SLIDE 5 : I LOVE YOU -->
-<div class="slide">
-<div class="card">
-<h1>I LOVE YOU 💖</h1>
 <p>
-No window dressing.  
-Only honest disclosures of my heart 🐾
+No window dressing,  
+only honest disclosures 🐱
 </p>
 </div>
 </div>
 
-<!-- SLIDE 6 : QUESTION -->
-<div class="slide">
+<div class="slide" id="loveSlide">
 <div class="card">
-<h1>📊 Final Entry</h1>
+<h1>💖 I LOVE YOU KITTY 💖</h1>
 <p>
-Will you be my girlfriend? 🐱❤️  
-<br><br>
-Debit: My Heart 💕  
-Credit: Your Smile 😄
+Debit: Your warmth ❤️  
+Credit: Your laughter 😄  
+Balance: Perfect 🐾
 </p>
-
-<button onclick="yesAnswer()">YES 💖</button>
-<button onclick="noAnswer()">NO 😿</button>
 </div>
 </div>
 
-<!-- SLIDE 7 : RESULT -->
-<div class="slide">
-<div class="card" id="resultCard">
-<h1>🐱</h1>
-<p></p>
+<div class="slide" id="questionSlide">
+<div class="card">
+<h1>🐱 Will you be my girlfriend?</h1>
+<p>
+Let’s file our together return under lifetime 📘  
+No capital gains — only compounded joy 💞
+</p>
+<button onclick="yesClicked()">YES 💖</button>
+<button onclick="noClicked()">NO 😿</button>
 </div>
 </div>
 
+<div class="slide" id="yesSlide">
+<div class="card">
+<h1>🎉 YAYYY 🥹❤️</h1>
+<p>
+You just made my balance sheet perfect 💕  
+From today — us, always 🐱💖
+</p>
+</div>
 </div>
 
+<div class="slide" id="noSlide">
+<div class="card">
+<h1>😿</h1>
+<p>
+It’s okay…  
+This kitty will still wish you happiness 🐱💔
+</p>
+</div>
+</div>
+
+<!-- CONTROLS -->
 <div class="controls">
 <button onclick="prev()">⬅ Prev</button>
 <button onclick="next()">Next ➡</button>
 </div>
 
 <script>
+let slides = document.querySelectorAll('.slide');
 let index = 0;
-const slider = document.getElementById("slider");
 
-function updateSlide() {
-    slider.style.transform = "translateX(-" + index * 100 + "vw)";
+function showSlide(i) {
+    slides.forEach(s => s.classList.remove('active'));
+    slides[i].classList.add('active');
 }
 
 function next() {
-    if (index < 6) index++;
-    updateSlide();
+    if (index < slides.length - 1) {
+        index++;
+        showSlide(index);
+        if (slides[index].id === "loveSlide" || slides[index].id === "yesSlide") fireworks();
+    }
 }
 
 function prev() {
-    if (index > 0) index--;
-    updateSlide();
+    if (index > 0) {
+        index--;
+        showSlide(index);
+    }
 }
 
-/* FIREWORK FUNCTION */
 function fireworks() {
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 15; i++) {
         let f = document.createElement("div");
         f.className = "firework";
         f.innerHTML = "🎆";
         f.style.left = Math.random() * 100 + "vw";
         f.style.top = Math.random() * 100 + "vh";
         document.body.appendChild(f);
-        setTimeout(() => f.remove(), 1500);
+        setTimeout(() => f.remove(), 2000);
     }
 }
 
-/* YES / NO */
-function yesAnswer() {
-    index = 6;
-    updateSlide();
+function yesClicked() {
+    index = slides.length - 2;
+    showSlide(index);
     fireworks();
-    document.getElementById("resultCard").innerHTML = `
-        <h1>She Said YES 💖🎉</h1>
-        <p>
-        My balance sheet is complete 😭❤️  
-        Welcome to my life, my favorite asset 🐱
-        </p>`;
 }
 
-function noAnswer() {
-    index = 6;
-    updateSlide();
-    document.getElementById("resultCard").innerHTML = `
-        <h1>😿😿😿</h1>
-        <p>
-        This cat is crying but still smiling 🐱💔  
-        Thank you for being honest.
-        </p>`;
+function noClicked() {
+    index = slides.length - 1;
+    showSlide(index);
 }
 </script>
 
