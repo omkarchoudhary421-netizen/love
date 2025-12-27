@@ -2,88 +2,74 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Kitty 🐱 | From Omkar</title>
+<title>For Kitty 🐱❤️</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-    margin: 0;
+body{
+    margin:0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(120deg, #ffd1dc, #ff9aa2);
-    overflow-x: hidden;
+    background: linear-gradient(135deg,#ffdde1,#ee9ca7);
+    color:#4a1c2c;
+    text-align:center;
+    overflow-x:hidden;
 }
 
-audio {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 999;
+section{
+    padding:60px 20px;
+    max-width:900px;
+    margin:auto;
 }
 
-.slide {
-    display: none;
-    min-height: 100vh;
-    padding: 40px 20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card{
+    background:rgba(255,255,255,0.95);
+    border-radius:25px;
+    padding:40px;
+    margin:40px 0;
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
 }
 
-.slide.active {
-    display: flex;
+h1,h2{
+    color:#e6005c;
 }
 
-.card {
-    background: rgba(255,255,255,0.95);
-    border-radius: 25px;
-    padding: 35px;
-    max-width: 750px;
-    text-align: center;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+p{
+    font-size:18px;
+    line-height:1.7;
 }
 
-h1 {
-    color: #e6005c;
+audio{
+    margin-top:20px;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
+button{
+    background:#ff5a7a;
+    border:none;
+    color:white;
+    padding:15px 30px;
+    font-size:18px;
+    border-radius:30px;
+    cursor:pointer;
+    margin:10px;
 }
 
-.controls {
-    position: fixed;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
+button:hover{
+    background:#e6005c;
 }
 
-button {
-    background: #ff5a7a;
-    border: none;
-    color: white;
-    padding: 12px 22px;
-    font-size: 16px;
-    border-radius: 25px;
-    cursor: pointer;
-    margin: 5px;
+.firework{
+    position:fixed;
+    font-size:30px;
+    animation:boom 2s linear infinite;
 }
 
-button:hover {
-    background: #e6005c;
+@keyframes boom{
+    0%{transform:translateY(100vh);opacity:1;}
+    100%{transform:translateY(-10vh);opacity:0;}
 }
 
-.firework {
-    position: fixed;
-    font-size: 28px;
-    animation: boom 2s linear infinite;
-}
-
-@keyframes boom {
-    0% {transform: scale(0.5); opacity: 1;}
-    100% {transform: scale(2); opacity: 0;}
+.hidden{
+    display:none;
 }
 </style>
 </head>
@@ -91,160 +77,110 @@ button:hover {
 <body>
 
 <!-- MUSIC -->
-<audio controls autoplay loop>
+<audio autoplay loop controls>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<!-- SLIDES -->
+<section>
 
-<div class="slide active">
 <div class="card">
-<h1>🐱 Happy New Year Kitty</h1>
-<p>
-It’s been a month of calls, smiles, and those tiny pauses  
-when your soothing voice makes the world go quiet 🌙
-</p>
-<p>
-On this first dawn of the year 🌅  
-I want to say what my heart has been balancing like a perfect ledger.
-</p>
-</div>
+<h1>🎉 Happy New Year Kitty 🐱</h1>
+<p>From Omkar ❤️</p>
 </div>
 
-<div class="slide">
 <div class="card">
-<h1>💖 You</h1>
 <p>
-I really like you 🐾  
-I love the way you love cats 🐱  
-the way your eyes feel like home 🏡  
-and how your guitar 🎸 turns silence into stories.
+Kitty, it’s been a month of calls, smiles, and those tiny pauses when your soothing voice makes the world go quiet 🌙  
+Today — the first dawn of the year 🌅 — I want to say what my heart has been balancing like a perfect ledger.
 </p>
-</div>
-</div>
 
-<div class="slide">
-<div class="card">
-<h1>📚 CA + Us</h1>
 <p>
-Between audits, ledgers, and deadlines 📊  
+I really like you. I love the way you love cats 🐱,  
+the way your eyes carry a calm that feels like home 🏡,  
+and the way your guitar 🎸 turns silence into stories.
+</p>
+
+<p>
+As two CA students, we live in audits, ledgers, and deadlines 📚 —  
+but somewhere between trial balance and tax provisions,  
 my feelings found their true and fair view.
 </p>
+
 <p>
-You’re my going concern,  
-the asset I never want to depreciate ❤️
+You’re my going concern, the asset I never want to depreciate.  
+In the balance sheet of life, your smile is my intangible with infinite value.
 </p>
-</div>
+
+<p>
+No creative accounting — only honest disclosures of the heart.  
+My debit is your warmth, my credit is your laughter.  
+Let’s file our together return under lifetime —  
+no capital gains, only compounded joy.
+</p>
 </div>
 
-<div class="slide">
 <div class="card">
-<h1>📈 Accounting of My Heart</h1>
-<p>
-Your smile is my intangible asset  
-with infinite value ✨
-</p>
-<p>
-No window dressing,  
-only honest disclosures 🐱
-</p>
-</div>
+<h1 id="loveText">I LOVE YOU ❤️</h1>
 </div>
 
-<div class="slide" id="loveSlide">
 <div class="card">
-<h1>💖 I LOVE YOU KITTY 💖</h1>
-<p>
-Debit: Your warmth ❤️  
-Credit: Your laughter 😄  
-Balance: Perfect 🐾
-</p>
-</div>
-</div>
+<h2>Will you be my girlfriend? 🐱💖</h2>
+<p>(Pure accounts logic 😄)</p>
 
-<div class="slide" id="questionSlide">
-<div class="card">
-<h1>🐱 Will you be my girlfriend?</h1>
-<p>
-Let’s file our together return under lifetime 📘  
-No capital gains — only compounded joy 💞
-</p>
-<button onclick="yesClicked()">YES 💖</button>
+<button onclick="yesClicked()">YES 💕</button>
 <button onclick="noClicked()">NO 😿</button>
-</div>
-</div>
 
-<div class="slide" id="yesSlide">
-<div class="card">
-<h1>🎉 YAYYY 🥹❤️</h1>
+<div id="yesMsg" class="hidden">
+<h2>🎆 YAYYYY 🎆</h2>
 <p>
-You just made my balance sheet perfect 💕  
-From today — us, always 🐱💖
+Assets increased permanently 💹  
+Liabilities: ZERO ❌  
+Profit: LIFETIME HAPPINESS 💖  
+</p>
+<p>
+Thank you Kitty,  
+I promise honesty, care, laughter,  
+and unlimited cat memes 🐱❤️
 </p>
 </div>
-</div>
 
-<div class="slide" id="noSlide">
-<div class="card">
-<h1>😿</h1>
+<div id="noMsg" class="hidden">
+<h2>😿 It’s Okay</h2>
 <p>
-It’s okay…  
-This kitty will still wish you happiness 🐱💔
+Cats crying silently… 🐱😭🐱😭  
+Still wishing you happiness, smiles,  
+and success in CA always ❤️
 </p>
 </div>
+
 </div>
 
-<!-- CONTROLS -->
-<div class="controls">
-<button onclick="prev()">⬅ Prev</button>
-<button onclick="next()">Next ➡</button>
-</div>
+</section>
 
 <script>
-let slides = document.querySelectorAll('.slide');
-let index = 0;
-
-function showSlide(i) {
-    slides.forEach(s => s.classList.remove('active'));
-    slides[i].classList.add('active');
-}
-
-function next() {
-    if (index < slides.length - 1) {
-        index++;
-        showSlide(index);
-        if (slides[index].id === "loveSlide" || slides[index].id === "yesSlide") fireworks();
-    }
-}
-
-function prev() {
-    if (index > 0) {
-        index--;
-        showSlide(index);
-    }
-}
-
-function fireworks() {
-    for (let i = 0; i < 15; i++) {
-        let f = document.createElement("div");
-        f.className = "firework";
-        f.innerHTML = "🎆";
-        f.style.left = Math.random() * 100 + "vw";
-        f.style.top = Math.random() * 100 + "vh";
+function createFireworks(){
+    for(let i=0;i<30;i++){
+        let f=document.createElement("div");
+        f.className="firework";
+        f.innerHTML="🎆";
+        f.style.left=Math.random()*100+"vw";
+        f.style.animationDuration=1+Math.random()*2+"s";
         document.body.appendChild(f);
-        setTimeout(() => f.remove(), 2000);
+        setTimeout(()=>f.remove(),2000);
     }
 }
 
-function yesClicked() {
-    index = slides.length - 2;
-    showSlide(index);
-    fireworks();
+createFireworks(); // for I LOVE YOU
+
+function yesClicked(){
+    document.getElementById("yesMsg").classList.remove("hidden");
+    document.getElementById("noMsg").classList.add("hidden");
+    createFireworks();
 }
 
-function noClicked() {
-    index = slides.length - 1;
-    showSlide(index);
+function noClicked(){
+    document.getElementById("noMsg").classList.remove("hidden");
+    document.getElementById("yesMsg").classList.add("hidden");
 }
 </script>
 
