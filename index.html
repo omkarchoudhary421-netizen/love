@@ -2,185 +2,197 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Kitty 🐱❤️</title>
+<title>For Kitty 💖</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
-body{
-    margin:0;
+body {
+    margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg,#ffdde1,#ee9ca7);
-    color:#4a1c2c;
-    text-align:center;
-    overflow-x:hidden;
+    background: linear-gradient(120deg, #ffdde1, #ee9ca7);
+    color: #4a1c2c;
+    overflow-x: hidden;
 }
-
-section{
-    padding:60px 20px;
-    max-width:900px;
-    margin:auto;
+section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
 }
-
-.card{
-    background:rgba(255,255,255,0.95);
-    border-radius:25px;
-    padding:40px;
-    margin:40px 0;
-    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+h1, h2 {
+    text-align: center;
 }
-
-h1,h2{
-    color:#e6005c;
+.card {
+    background: rgba(255,255,255,0.9);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-
-p{
-    font-size:18px;
-    line-height:1.7;
+.rose {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    animation: fall linear infinite;
 }
-
-audio{
-    margin-top:20px;
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
 }
-
-button{
-    background:#ff5a7a;
-    border:none;
-    color:white;
-    padding:15px 30px;
-    font-size:18px;
-    border-radius:30px;
-    cursor:pointer;
-    margin:10px;
+.meme {
+    font-style: italic;
+    background: #fff3f6;
+    border-left: 5px solid #ff5a7a;
+    padding: 15px;
+    margin: 15px 0;
 }
-
-button:hover{
-    background:#e6005c;
+audio {
+    display: block;
+    margin: 20px auto;
 }
-
-.firework{
-    position:fixed;
-    font-size:30px;
-    animation:boom 2s linear infinite;
+img {
+    max-width: 200px;
+    border-radius: 20px;
+    display: block;
+    margin: 20px auto;
 }
-
-@keyframes boom{
-    0%{transform:translateY(100vh);opacity:1;}
-    100%{transform:translateY(-10vh);opacity:0;}
-}
-
-.hidden{
-    display:none;
+.footer {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 50px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- MUSIC -->
+<!-- Background Music -->
 <audio autoplay loop controls>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
 <section>
-
-<div class="card">
-<h1>🎉 Happy New Year Kitty 🐱</h1>
-<p>From Omkar ❤️</p>
-</div>
+<h1>🎉 Happy New Year Kitty 🎉</h1>
+<h2>From Omkar 💕</h2>
 
 <div class="card">
 <p>
-Kitty, it’s been a month of calls, smiles, and those tiny pauses when your soothing voice makes the world go quiet 🌙  
-Today — the first dawn of the year 🌅 — I want to say what my heart has been balancing like a perfect ledger.
-</p>
-
-<p>
-I really like you. I love the way you love cats 🐱,  
-the way your eyes carry a calm that feels like home 🏡,  
-and the way your guitar 🎸 turns silence into stories.
-</p>
-
-<p>
-As two CA students, we live in audits, ledgers, and deadlines 📚 —  
-but somewhere between trial balance and tax provisions,  
-my feelings found their true and fair view.
-</p>
-
-<p>
-You’re my going concern, the asset I never want to depreciate.  
-In the balance sheet of life, your smile is my intangible with infinite value.
-</p>
-
-<p>
-No creative accounting — only honest disclosures of the heart.  
-My debit is your warmth, my credit is your laughter.  
-Let’s file our together return under lifetime —  
-no capital gains, only compounded joy.
+Before this year gives you new chapters, new audits, new balances,  
+I just want to start **2025 with honesty, courage, and a little filmy courage**.
 </p>
 </div>
 
 <div class="card">
-<h1 id="loveText">I LOVE YOU ❤️</h1>
+<h2>About You 🌸</h2>
+<p>
+You’re not just **Suhana**, you’re **Kitty** —  
+a CA student with dreams bigger than balance sheets,  
+someone who loves **cats**, plays the **guitar**,  
+and has a voice so soothing that even my anxiety depreciates straight-line.
+</p>
+<p>
+The two calls we had?  
+Short for time, but long enough for my heart to say —  
+*“Bas, yahi hai.”*
+</p>
+<p>
+Your eyes feel like heaven —  
+the kind where SRK would stop running and say,  
+“Rahul, naam toh suna hoga… par dil toh yahin reh gaya.”
+</p>
 </div>
 
 <div class="card">
-<h2>Will you be my girlfriend? 🐱💖</h2>
-<p>(Pure accounts logic 😄)</p>
+<h2>CA + Commerce Memes (Healthy Flirting 😄)</h2>
+<div class="meme">📊 When CA students fall in love:  
+Assets increase, liabilities disappear.</div>
 
-<button onclick="yesClicked()">YES 💕</button>
-<button onclick="noClicked()">NO 😿</button>
+<div class="meme">📚 ICAI syllabus is scary,  
+but losing you would be scarier.</div>
 
-<div id="yesMsg" class="hidden">
-<h2>🎆 YAYYYY 🎆</h2>
+<div class="meme">🧮 I don’t want exemption in subjects,  
+I want exemption in your heart.</div>
+
+<div class="meme">📈 My feelings for you follow compound interest —  
+they just keep growing.</div>
+</div>
+
+<div class="card">
+<h2>A Letter From My Heart 💌</h2>
 <p>
-Assets increased permanently 💹  
-Liabilities: ZERO ❌  
-Profit: LIFETIME HAPPINESS 💖  
+Kitty,  
+I never planned this moment like a study timetable,  
+it just happened — slowly, naturally, honestly.
 </p>
 <p>
-Thank you Kitty,  
-I promise honesty, care, laughter,  
-and unlimited cat memes 🐱❤️
+In this one month, you became that calm between my lectures,  
+that smile after a long study day,  
+that notification I secretly wait for.
+</p>
+<p>
+I admire how focused you are,  
+how you chase CA with determination,  
+how you balance dreams and discipline —  
+something even textbooks can’t teach.
+</p>
+<p>
+I don’t promise filmy perfection,  
+but I promise sincerity.  
+I don’t promise easy days,  
+but I promise I’ll sit beside you —  
+even during audit, even during results, even during silence.
+</p>
+<p>
+Like SRK style, arms open —  
+not to impress you,  
+but to tell you:  
+*“Main hoon na.”*
+</p>
+<p>
+This letter isn’t about pressure,  
+it’s about truth.  
+If love is an entry,  
+then you’ve already been posted in my heart.
 </p>
 </div>
 
-<div id="noMsg" class="hidden">
-<h2>😿 It’s Okay</h2>
-<p>
-Cats crying silently… 🐱😭🐱😭  
-Still wishing you happiness, smiles,  
-and success in CA always ❤️
+<div class="card">
+<h2>From Puku 🧸</h2>
+<img src="puku.jpg" alt="Puku">
+<p style="text-align:center;">
+“Hello Kitty bhabhi 🐱❤️  
+Main Puku hoon.  
+Aap bhaiya ke liye bahut special ho.  
+Please hamesha smile karna  
+aur bhaiya ka dhyaan rakhna.  
+Happy New Year bhabhi 💕”
 </p>
 </div>
 
+<div class="card">
+<h2>And Finally… ❤️</h2>
+<p style="font-size:20px; text-align:center;">
+Kitty,  
+I like you.  
+I care for you.  
+And with all honesty, courage, and respect —
+</p>
+<h1 style="color:#e6005c;">I LOVE YOU 💖</h1>
 </div>
 
 </section>
 
+<div class="footer">
+Made with love by Omkar 🌹
+</div>
+
 <script>
-function createFireworks(){
-    for(let i=0;i<30;i++){
-        let f=document.createElement("div");
-        f.className="firework";
-        f.innerHTML="🎆";
-        f.style.left=Math.random()*100+"vw";
-        f.style.animationDuration=1+Math.random()*2+"s";
-        document.body.appendChild(f);
-        setTimeout(()=>f.remove(),2000);
-    }
-}
-
-createFireworks(); // for I LOVE YOU
-
-function yesClicked(){
-    document.getElementById("yesMsg").classList.remove("hidden");
-    document.getElementById("noMsg").classList.add("hidden");
-    createFireworks();
-}
-
-function noClicked(){
-    document.getElementById("noMsg").classList.remove("hidden");
-    document.getElementById("yesMsg").classList.add("hidden");
+for (let i = 0; i < 30; i++) {
+    let rose = document.createElement("div");
+    rose.className = "rose";
+    rose.innerHTML = "🌹";
+    rose.style.left = Math.random() * 100 + "vw";
+    rose.style.animationDuration = 5 + Math.random() * 5 + "s";
+    document.body.appendChild(rose);
 }
 </script>
 
